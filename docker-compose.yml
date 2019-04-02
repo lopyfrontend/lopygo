@@ -1,0 +1,11 @@
+version: "2.1"
+services:
+  site:
+    build:
+      context: .
+      dockerfile: dockerfile/develop/Dockerfile
+    image: "develop/node/lopy_site_new"
+    volumes:
+      - $PWD:/app
+    ports:
+      - 8080:8080

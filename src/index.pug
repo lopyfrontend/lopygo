@@ -1,5 +1,24 @@
 extends layout
+
+
 block content
+  nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
+    .container
+      a.navbar-brand.js-scroll-trigger(href='#page-top') Start Bootstrap
+      button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto.my-2.my-lg-0
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#about') About
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#services') Services
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#blog') Blog
+          li.nav-item
+            a.nav-link.js-scroll-trigger(href='#contact') Contact
   // Masthead
   header.masthead
     .container.h-100
@@ -60,7 +79,7 @@ block content
               .project-name
                 | Project Name
         .col-lg-4.col-sm-6
-          a.portfolio-box(href='img/portfolio/fullsize/2.jpg')
+          a.portfolio-box(href='img1')
             img.img-fluid(src='img/portfolio/thumbnails/2.jpg', alt='')
             .portfolio-box-caption
               .project-category.text-white-50
@@ -99,12 +118,202 @@ block content
                 | Category
               .project-name
                 | Project Name
+
+
+  // Contact Section
+  section#blog.blog.page-section
+    .container
+      h2.text-center.mt-0 BLOG
+        hr.divider.my-4
+      h3.text-center 平时记录一下遇到的问题，方便下一次遇到时查；有空时整理一下有用的技术；基本当一个带笔记的书签用
+      .grid-blog
+        section.grid-wrap
+          ul.grid(style='position: relative; height: 881px;')
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2019/2019-2019-03-22-linux-server-security/', target='_blank')
+                figure
+                  figcaption
+                    h3 linux基本安全
+                    p
+                    p
+                      | 自己运营一个小网站，还是需要一些安全知识
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2019/2019-2019-03-03-debian-charset-words-zhcn-program/', target='_blank')
+                figure
+                  figcaption
+                    h3 debian系统下各种中文显示、乱码、输入等问题
+                    p
+                    p 记录debian下面各种中文字符的问题
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2019/2019-2019-01-30-docker-php-use-xdebug/', target='_blank')
+                figure
+                  figcaption
+                    h3 php在docker环境下的远程xdebug
+                    p
+                    p
+                      | 复习一下
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-12-11-php-cli-apc/', target='_blank')
+                figure
+                  figcaption
+                    h3 php-cli模式下使用apcu的问题
+                    p
+                    p 平时都是web模式下使用apc,最近在cli模式（swoole）下使用apcu的时候出现了问题。比如：设置了ttl，但不过期
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-29-ssh-channel/', target='_blank')
+                figure
+                  figcaption
+                    h3 ssh隧道
+                    p
+                    p
+                      | 孤陋寡闻了，经常会用到的ssh。SSH是一种安全的传输协议，用在连接服务器上比较多。
+                      br
+                      | 平时，还会用到他的隧道转发功能，类似代理。
+                      br
+                      | 现在猛然发下，居然还能用于内网穿透，于是乎记录一下
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-27-csharp-print-and-view/', target='_blank')
+                figure
+                  figcaption
+                    h3 csharp软件打印和预览
+                    p
+                    p
+                      | c#写个打印功能，最烦写前端了
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-23-android-webview-capture-package/', target='_blank')
+                figure
+                  figcaption
+                    h3 安卓抓包webview
+                    p
+                    p
+                      | 要写一个某app的助手app，但没有接口，抓包看看是怎么运营的。但由于android6.0以的安全机制，导致
+                      br
+                      | 在运行webview的https流量抓不到，于是写一篇留做纪念
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-14-debian9-install-xmind/', target='_blank')
+                figure
+                  figcaption
+                    h3 debian9安装xmind8
+                    p
+                    p
+                      | 安装xmind
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-14-debian9-xwindow-not-boot/', target='_blank')
+                figure
+                  figcaption
+                    h3 debian8升级到debian9后不能启动桌面
+                    p
+                    p 一个不小心把debian8升级到了debian9，然后悲剧就开始了
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-12-git-usage-summary/', target='_blank')
+                figure
+                  figcaption
+                    h3 Git用法总结
+                    p
+                    p
+                      | 毫无疑问，Git是当下最流行、最好用的版本控制系统
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-12-jetbrains-toolbox-install/', target='_blank')
+                figure
+                  figcaption
+                    h3 jetbrains toolbox的安装
+                    p
+                    p
+                      | 使用jetbrains的ide多年了，已经习惯了他家的操作习惯。日常使用包括phpstorm、datagrip、intellij idea。jetbrains toolbox的安装是很简单的，只是有时会出一些没见过的错，现把这些记录下来。
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-08-bash-switch-user/', target='_blank')
+                figure
+                  figcaption
+                    h3 【转】Shell脚本中实现切换用户并执行命令操作
+                    p
+                    p 这篇文章主要介绍了Shell脚本中实现切换用户并执行命令操作,看了示例代码就秒懂了,原来如此简单,需要的朋友可以参考下
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-11-07-travis-test-hexo/', target='_blank')
+                figure
+                  figcaption
+                    h3 以编译hexo的方式试用travis
+                    p
+                    p
+                      | 试用一下持续集成服务 travis。
+                      br
+                      | travis对github的开源仓库免费，正巧想写点啥子，正好笔者才换了hexo的blog，正好hexo源码和编译后的html文件在不同的仓库（分支）。
+                    p 既然这么多的正巧那就把使用travis的过程记录下来吧
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-10-30-hexo-add-local-search/', target='_blank')
+                figure
+                  figcaption
+                    h3 为 hexo-next 增加搜索功能
+                    p
+                    p 为 hexo - next 增加搜索功能，方便快速定位
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-10-29-win7-install-vagrant/', target='_blank')
+                figure
+                  figcaption
+                    h3 win7 安装vagrant
+                    p
+                    p win7 安装vagrant，做为开发环境，但有时会出错。现将之记录下来。
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-08-01-ionic3-gps/', target='_blank')
+                figure
+                  figcaption
+                    h3 ionic3 gps
+                    p
+                    p 做一个ionic3版的GPS定位，我主要是参考ionic官网的简单例子来做的，不足请指教。
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-07-02-windows7-iso-ed2k/', target='_blank')
+                figure
+                  figcaption
+                    h3 整理微软的一些下载地址
+                    p
+                    p 整理几个win7的系统下载地址，都是vol版，方便以后安装
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-06-28-jekyll-panxw-blog/', target='_blank')
+                figure
+                  figcaption
+                    h3 jekyll panxw blog
+                    p
+                    p
+                      | 从前blog移植过来，暂无摘要，后期再补
+                      br
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-05-30-winserver-2003-r2-sp2-vol-enterprise/', target='_blank')
+                figure
+                  figcaption
+                    h3 winserver 2003 r2 sp2 vol 企业版
+                    p
+                    p 有的时候会用winserver2003 做服务器，还是记下一个吧
+                    p
+            li.grid-sizer
+              a(href='https://blog.lopygo.com/2018/2018-2018-05-17-debian9-lnmp/', target='_blank')
+                figure
+                  figcaption
+                    h3 debian9 安装 lnmp
+                    p
+                    p 从前blog移植过来，暂无摘要，后期再补
+                    p
   // Call to Action Section
   section.page-section.bg-dark.text-white
     .container.text-center
       h2.mb-4 Free Download at Start Bootstrap!
-      a.btn.btn-light.btn-xl(href='https://startbootstrap.com/themes/creative/') Download Now!
-  // Contact Section
+      a.btn.btn-light.btn-xl(href='h  ttps://startbootstrap.com/themes/creative/') Download Now!
+
   section#contact.page-section
     .container
       .row.justify-content-center

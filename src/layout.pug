@@ -20,25 +20,28 @@ html(lang='en')
     //link(href='css/creative.min.css', rel='stylesheet')
   body#page-top
     // Navigation
-    nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
-      .container
-        a.navbar-brand.js-scroll-trigger(href='#page-top') Start Bootstrap
-        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navbarResponsive.collapse.navbar-collapse
-          ul.navbar-nav.ml-auto.my-2.my-lg-0
-            li.nav-item
-              a.nav-link.js-scroll-trigger(href='#about') About
-            li.nav-item
-              a.nav-link.js-scroll-trigger(href='#services') Services
-            li.nav-item
-              a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
-            li.nav-item
-              a.nav-link.js-scroll-trigger(href='#contact') Contact
+
     block content
 
     // Footer
     footer.bg-light.py-5
+      .container
+        ul.friend-links
+          li
+            a(href='#')
+              i.fa.fa-heart
+          li
+            a(href='#')
+              i.fa.fa-signal
+          li
+            a(href='#')
+              i.fa.fa-yen-sign
+          li
+            a(href='https://pos.lopygo.com')
+              i.fa.fa-blog
+          li
+            a(href='https://blog.lopygo.com')
+              i.fa.fa-credit-card
       .container
         .small.text-center.text-muted Copyright © 2019 - Start Bootstrap
     // Bootstrap core JavaScript
@@ -47,6 +50,7 @@ html(lang='en')
     // Plugin JavaScript
     script(src='https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js')
     script(src='https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js')
+
     // Custom scripts for this template
     //script(src='js/creative.min.js')
     block tail_content

@@ -8,7 +8,11 @@ module.exports = {
   output: {
     filename: 'js/[name].js',
   },
-  module: {
+    watchOptions: {
+      poll:true,
+        ignored:/node_modules/
+    },
+    module: {
     rules: [
       {
         test: /\.js$/,

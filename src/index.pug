@@ -1,6 +1,5 @@
 extends layout
 
-
 block content
   nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top.py-3
     .container
@@ -126,9 +125,9 @@ block content
       h2.text-center.mt-0 BLOG
         hr.divider.my-4
       h3.text-center 平时记录一下遇到的问题，方便下一次遇到时查；有空时整理一下有用的技术；基本当一个带笔记的书签用
-      .grid-blog
+      #grid-gallery.grid-gallery
         section.grid-wrap
-          ul.grid(style='position: relative; height: 881px;')
+          ul.grid
             li.grid-sizer
               a(href='https://blog.lopygo.com/2019/2019-2019-03-22-linux-server-security/', target='_blank')
                 figure
@@ -330,3 +329,6 @@ block content
           i.fas.fa-envelope.fa-3x.mb-3.text-muted
           // Make sure to change the email address in anchor text AND the link below!
           a.d-block(href='mailto:contact@yourwebsite.com') contact@yourwebsite.com
+block tail_content
+  script(src='https://cdn.jsdelivr.net/gh/modernizr/modernizr@2.6.3/modernizr.min.js')
+  script(src='https://cdn.jsdelivr.net/npm/masonry.js@3.1.5/dist/masonry.pkgd.min.js')

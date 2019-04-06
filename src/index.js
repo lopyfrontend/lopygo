@@ -3,7 +3,9 @@
 import style from "./scss/creative.sass";
 
 // Import scripts
+//import masonry from "./js/masonry";
 import script from "./js/creative.js";
+import gridscroll from "./js/gridscroll";
 
 
 import img1 from './img/portfolio/fullsize/1.jpg';

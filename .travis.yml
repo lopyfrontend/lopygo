@@ -21,6 +21,8 @@ notifications:
   email:       false
 deploy:
   provider: releases
+  file_glob: true
+  file: dist
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true
   on:

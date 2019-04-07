@@ -12,6 +12,7 @@ script:
 #  - npm test
   - yarn run dev
   - yarn run build
+  - tar -zcvf dist.tar.gz dist
 #after_script:
 #  -
 cache:
@@ -21,8 +22,7 @@ notifications:
   email:       false
 deploy:
   provider: releases
-  file_glob: true
-  file: dist/*
+  file: dist.tar.gz
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true
   on:

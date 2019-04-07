@@ -1,13 +1,21 @@
 const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserJSPlugin = require("terser-webpack-plugin");
 module.exports = {
+    optimization: {
+        minimizer: [
+            new TerserJSPlugin({}),
+            new OptimizeCSSAssetsPlugin({})
+        ]
+    },
   entry: {
     creative: './src/index.js',
     assets: './src/assets.js'
   },
   output: {
-    filename: 'js/[name].js',
+    filename: 'js/[name].min.js',
   },
     watchOptions: {
       poll:true,
@@ -99,7 +107,7 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
         //这里路径不对
-      filename: "css/[name].css",
+      filename: "css/[name].min.css",
       chunkFilename: "css/[id].css"
     })
   ],

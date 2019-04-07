@@ -2,13 +2,26 @@ language:      node_js
 git:
   depth:       3
 node_js:
-  - "node"
-install:       npm install
+  - "stable"
+skip_cleanup: true
+before_install:
+  - lsb_release -a
+install:
+  - npm i -g yarn
+  - yarn global add webpack webpack-cli
+  - yarn install
 script:
-  - npm test
-  - gulp
+#  - npm test
+  - yarn run dev
+  - yarn run build
 cache:
   directories:
     - node_modules
 notifications:
   email:       false
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  skip_cleanup: true
+  on:
+    branch: release

@@ -22,8 +22,8 @@ notifications:
 deploy:
   provider: releases
   file_glob: true
-  file: dist
+  file: dist/*
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true
   on:
-    tag: release
+    tag: true

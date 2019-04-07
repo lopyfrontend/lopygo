@@ -2,17 +2,17 @@ language:      node_js
 node_js:
   - "8"
 skip_cleanup: true
-before_install:
-  - lsb_release -a
-install:
-  - npm i -g yarn
-  - yarn global add webpack webpack-cli
-  - yarn install
-script:
-#  - npm test
-  - yarn run dev
-  - yarn run build
-  - tar -zcvf dist.tar.gz dist
+#before_install:
+#  - lsb_release -a
+#install:
+#  - npm i -g yarn
+#  - yarn global add webpack webpack-cli
+#  - yarn install
+#script:
+##  - npm test
+#  - yarn run dev
+#  - yarn run build
+#  - tar -zcvf dist.tar.gz dist
 #after_script:
 #  -
 cache:
@@ -22,8 +22,8 @@ notifications:
   email:       false
 deploy:
   provider: releases
-  file_glob: true
-  file: dist.tar.gz
+  #file_glob: true
+  #file: dist.tar.gz
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true
   on:

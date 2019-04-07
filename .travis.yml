@@ -22,6 +22,7 @@ notifications:
   email:       false
 deploy:
   provider: releases
+  file_glob: true
   file: dist.tar.gz
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true

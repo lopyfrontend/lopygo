@@ -1,8 +1,6 @@
 language:      node_js
-git:
-  depth:       3
 node_js:
-  - "stable"
+  - "8"
 skip_cleanup: true
 before_install:
   - lsb_release -a
@@ -14,6 +12,8 @@ script:
 #  - npm test
   - yarn run dev
   - yarn run build
+#after_script:
+#  -
 cache:
   directories:
     - node_modules
@@ -24,4 +24,4 @@ deploy:
   api_key: $GITHUB_OAUTH_TOKEN
   skip_cleanup: true
   on:
-    branch: release
+    tag: release
